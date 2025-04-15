@@ -309,6 +309,13 @@ def get_models():
         }
     })
 
+@app.route('/test_connection', methods=['GET'])
+def test_connection():
+    return jsonify({
+        "status": "success",
+        "message": "API connection successful!"
+    })
+
 @app.route('/health', methods=['GET'])
 def health_check():
     return jsonify({
